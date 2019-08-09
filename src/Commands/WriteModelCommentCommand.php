@@ -58,7 +58,7 @@ class WriteModelCommentCommand extends Command
     {
         $modelArg = $this->argument('modelArg');
         $output = "<?php\r\n";
-        $this->dirs = ['app'];
+        $this->dirs = ['app','Modules'];
 
         if (empty($modelArg)) {
             $models = $this->loadModels();
