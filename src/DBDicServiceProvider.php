@@ -31,6 +31,9 @@ class DBDicServiceProvider extends ServiceProvider
             || $this->isLumen()) {
             require __DIR__ . '/routes.php';
         }
+		$this->commands([
+            Commands\WriteModelCommentCommand::class,
+        ]);
     }
 
     /**
