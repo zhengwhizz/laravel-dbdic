@@ -20,19 +20,19 @@ class DBDicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $tables = TableHelper::getTableInfos();
+ {
+        $tables=     TableHelper::getTableInfos();
         return view('dbdic::index',compact('tables'));
     }
 
     /**
      * 导出文档
-     *
+          *
      * @param $type
      */
     public function export($type)
     {
-        if(!in_array($type,array('html','pdf','md'))){
+        if(!in_array($type,array(     'html','pdf','md'))){
             return null;
         }
         $tables = TableHelper::getTableInfos();
